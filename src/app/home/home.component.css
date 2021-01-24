@@ -1,0 +1,19 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+li {
+    border: 1px solid #f2516b;
+    margin-bottom: 30px;
+    padding: 10px 100px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    background: #f2516b;
+}
+li:hover {
+    color: #fff;
+    background: #d10022;
+}

@@ -1,0 +1,15 @@
+<section>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <h4 class="erro" *ngIf="flag === true" >Por favor, preencha todos os campos corretamente</h4>
+        <input type="text" placeholder="Marca..." name="marca" [(ngModel)]="computadores.marca">
+        <input type="text" placeholder="Modelo..." name="modelo" [(ngModel)]="computadores.modelo">
+        <input type="text" placeholder="Placa-mãe..." name="mobo" [(ngModel)]="computadores.mobo">
+        <input type="number" placeholder="Memória RAM..." name="ram" [(ngModel)]="computadores.ram">
+        <input type="number" placeholder="Capacidade HD..." name="hdTamanho" [(ngModel)]="computadores.hdTamanho">
+        <input type="text" placeholder="Marca HD..." name="hdMarca" [(ngModel)]="computadores.hdMarca">
+        <input type="text" placeholder="Processador..." name="cpu" [(ngModel)]="computadores.cpu">
+        <input type="number" placeholder="Velocidade Processador..." name="veloCpu" [(ngModel)]="computadores.veloCpu">
+        <input type="url" placeholder="URL da Imagem" name="foto" [(ngModel)]="computadores.foto">
+        <button type="submit">Cadastrar</button>
+      </form>
+</section>

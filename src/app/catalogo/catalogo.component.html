@@ -1,0 +1,44 @@
+<section>
+  <h1>Catálogo de Computadores</h1>
+  
+  <div class="pesquisa">
+    <input class="campo-busca" (keydown.enter)="filtra()" type="text" [(ngModel)]="busca">
+    <span class="filtrar" (click)="filtra()"><i class="fas fa-search"></i> Filtra</span>
+  </div>
+  <h2>Total: {{recebeComputador.length}} PC(s)</h2>
+  <h2 class="erro" *ngIf="recebeComputador.length < 1">Não há computadores cadastrados!</h2>
+  <div class="card-container" *ngIf="recebeComputador.length > 0">
+    <ul>
+      <li *ngFor="let pc of recebeComputador; let i = index">
+        <div (click)="detalhes(i)" class="cardPP">
+          <h3>{{pc.marca}}</h3>
+          <img src="{{ pc.foto }}">
+          <p><a  (click)="detalhes(i)">+Detalhes</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="popup" *ngIf="recebeComputador.length > 0">
+    <div class="cardGG">
+      <img src="{{ recebeComputador[this.key].foto }}" alt="">
+      <div class="card-detalhes">
+        <h4><span>Marca/Modelo:</span> {{recebeComputador[this.key].marca}}, {{recebeComputador[this.key].modelo}}</h4>
+      </div>
+      <div class="card-detalhes">
+        <h4><span>Processador:</span> {{recebeComputador[this.key].cpu}}, {{recebeComputador[this.key].veloCpu}}GHz</h4>
+      </div>
+      <div class="card-detalhes">
+        <h4><span>Placa-mãe:</span> {{recebeComputador[this.key].mobo}}</h4>
+      </div>
+      <div class="card-detalhes">
+        <h4><span>Memória RAM:</span> {{recebeComputador[this.key].ram}}gb</h4>
+      </div>
+      <div class="card-detalhes">      
+        <h4><span>HD:</span> {{recebeComputador[this.key].hdMarca}} {{recebeComputador[this.key].hdTamanho}}gb</h4>
+      </div>
+    </div>
+    <span class="fechar" (click)="fechaPop()"><i class="fas fa-times"></i></span>
+    <span class="editar" ><i class="fas fa-wrench"></i> Editar</span>
+    <span class="deletar" (click)="exclui(key)" key="key"><i class="fas fa-trash-alt"></i> Deletar</span>
+  </div>
+</section>

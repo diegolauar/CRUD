@@ -1,0 +1,125 @@
+* {
+    color: #fff;
+}
+section {
+    width: 100%;
+    text-align: center;
+}
+h2, h1 {
+    padding: 10px;
+}
+.erro {
+    border: 4px solid #fff;
+    color: #f00;
+    margin-top: 20px;
+    font-size: 40px;
+}
+.card-container ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+.card-container li {
+    width: 150px;
+    margin: 5px 10px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+}
+.card-container li:hover {
+    transform: scale(1.1, 1.1);
+}
+.cardPP{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+.cardPP img {
+    width: 100%;
+}
+#popup {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+.cardGG {
+    margin: 40px auto;
+    width: 50%;
+    border: 2px solid #444;
+    background: #999;
+}
+.cardGG img {
+    width: 100%;
+}
+.fechar {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 25px;
+    font-size: 40px;
+}
+.fechar:hover {
+    transform: scale(1.3,1.3)
+}
+.editar, .deletar {
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    background: #999;
+}
+.editar {
+    background: #00b;
+}
+.deletar {
+    background: #f00;
+}
+.filtrar {
+    padding: 2px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    background: #999;
+}
+.card-detalhes {
+    display: flex;
+}
+.card-detalhes span {
+    color: #d10022;
+}
+.card-detalhes h4 {
+    margin: 5px;
+}
+.campo-busca{
+    color: #000;
+    height: 35px;
+}
+.pesquisa {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 500px) {
+    .card-container ul {
+        width: 100%;
+    }
+    .cardGG {
+        width: 80%;
+    }
+    .fechar {
+        margin: 10px;
+    }    
+}

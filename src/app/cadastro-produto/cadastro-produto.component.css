@@ -1,0 +1,37 @@
+section, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+input {
+    width: 50%;
+    height: 30px;
+    margin: 2px 0;
+}
+section div {
+    text-align: center;
+    width: 50%;
+}
+button {
+    border: 1px solid #f2516b;
+    background: none;
+    padding: 10px 100px;
+    color: #d10022;
+    font-size: 30px;
+    margin-top: 5px;
+}
+button:hover {
+    color: #fff;
+    background: #f2516b;
+}
+.erro {
+    color: #f00;
+    font-size: 20px;
+}
+@media screen and (max-width: 500px) {
+    input {
+        width: 90%;
+    }       
+}
